@@ -34,7 +34,7 @@
         <div class="col-lg-4">
           <div class="blog-siderbar">
             <div class="all-category">
-              <div class="search-area">
+              {% comment %} <div class="search-area">
                 <h3>Search Blog</h3>
                 <div class="space24"></div>
                 <form>
@@ -45,7 +45,7 @@
                         stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg></button>
                 </form>
-              </div>
+              </div> {% endcomment %}
               <div class="space30"></div>
               <div class="categories-area">
                 <h3>Blog Category</h3>
@@ -224,10 +224,13 @@
         <div class="col-lg-8">
           <div class="bg-area">
             <div class="row">
+              {% for blogs in cdata %}
               <div class="col-lg-6 col-md-6">
                 <div class="vl-blog-1-item">
                   <div class="vl-blog-1-thumb image-anime">
-                    <img src="{% static 'assets/img/all-images/blog/blog-img1.png' %}" alt="housa">
+                    {% if blogs.image %}
+                    <a href="#"><img src="{{blogs.image.url}}" alt="housa">
+                    {% endif %}
                   </div>
                   <div class="vl-blog-1-content">
                     <div class="date">
@@ -267,15 +270,16 @@
                       </ul>
                     </div>
                     <div class="space24"></div>
-                    <h4 class="vl-blog-1-title"><a href="blog-detail">5 Tips For First-Time <br class="d-lg-block d-none"> Homebuyers Housa</a></h4>
+                    <h4 class="vl-blog-1-title"><a href="#">{{blogs.title}}<br class="d-lg-block d-none"> Homebuyers Housa</a></h4>
                     <div class="space24"></div>
                     <div class="vl-blog-1-icon">
-                      <a href="blog-detail" class="readmore">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                      <a href="#" class="readmore">Read More <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6 col-md-6">
+              {% endfor %}
+              {% comment %} <div class="col-lg-6 col-md-6">
                 <div class="vl-blog-1-item">
                   <div class="vl-blog-1-thumb image-anime">
                     <img src="{% static 'assets/img/all-images/blog/blog-img2.png' %}" alt="housa">
@@ -529,7 +533,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> {% endcomment %}
               <div class="col-lg-12">
                 <div class="space30"></div>
                 <div class="pagination-area">
