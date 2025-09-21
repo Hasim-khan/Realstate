@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Contact Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0d1b1e;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .email-container {
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            background: #111;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .header-logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .contact-box {
+            background: #173b3f;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .contact-message {
+            background: #ff6f61;
+            color: white;
+            padding: 10px;
+            display: inline-block;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .support-section {
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .contact-info {
+            margin-top: 10px;
+        }
+        .flower {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-image: url('https://i.imgur.com/1JzF6LE.png'); /* Replace with flower image URL */
+            background-size: cover;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            from {
+                transform: translateY(-50px) rotate(0deg);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(600px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header-logo">
+            <h2>Technology</h2>
+        </div>
+        <div class="contact-box">
+            <h3>Thanks for Contacting Us!</h3>
+            <p>We appreciate your message and will get back to you soon.</p>
+            <div class="contact-message">We will contact you soon.</div>
+        </div>
+        <div class="support-section">
+            <h3>Customer Care Support</h3>
+            <p>Need help? Contact us anytime.</p>
+            <div class="contact-info">
+                <p>📞 +(000) 123 456 789</p>
+                <p>📧 info@technology.com</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function createFlower() {
+            const flower = document.createElement("div");
+            flower.classList.add("flower");
+            flower.style.left = Math.random() * window.innerWidth + "px";
+            flower.style.animationDuration = Math.random() * 3 + 2 + "s";
+            document.body.appendChild(flower);
+            setTimeout(() => flower.remove(), 5000);
+        }
+        setInterval(createFlower, 300);
+    </script>
+</body>
+</html>

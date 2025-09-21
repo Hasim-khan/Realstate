@@ -23,10 +23,13 @@
   <link rel="stylesheet" href="{% static 'assets/css/plugins/swiper-slider.css' %}">
   <link rel="stylesheet" href="{% static 'assets/css/plugins/odometer.css' %}">
   <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+  <script src="https://cdn.jsdelivr.net/npm/sweetify@0.0.6/dist/sweetify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </head>
 
 <body class="body1">
-   {% load static %}
+  {% load static %}
+  {% load sweetify %}{% sweetify %}
   <!--===== PRELOADER STARTS =======-->
   <div class="preloader">
     <div class="loading-container">
@@ -51,7 +54,7 @@
 
   <!--===== FOOTER AREA STARTS =======-->
   <div class="footer-cta2-bg-area">
-    <div class="cta2-section-area">
+    {% comment %} <div class="cta2-section-area">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-4">
@@ -72,7 +75,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> {% endcomment %}
     <div class="vl-footer2-section-area">
       <div class="container">
         <div class="row">

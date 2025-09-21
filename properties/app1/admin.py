@@ -9,3 +9,9 @@ class BlogAdmin(admin.ModelAdmin):
         'date',
     ]
     list_display = ['title','content','image','blogdate']
+
+
+@admin.register(ContactMessage)
+class ContactMessageAdmin(admin.ModelAdmin):
+    list_display = ("first_name", "last_name", "email", "phone", "service_type", "created_at")
+    search_fields = ("first_name", "last_name", "email", "phone", "service_type")

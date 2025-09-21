@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app1',
-    'ckeditor'
+    'ckeditor',
+    'sweetify'
 ]
 
 MIDDLEWARE = [
@@ -143,10 +144,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Additional settings can be added here as needed
 # Email settings
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = '                     '  # Your email address         
-# EMAIL_HOST_PASSWORD = '                     '  # Your email password
-# DEFAULT_FROM_EMAIL = EMAIL_HOST_USER  # Default from email for sending emails
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'sumitnagar6777@gmail.com'  # Your email address         
+EMAIL_HOST_PASSWORD = 'txqf udej vxvw uehb'  # Your email password
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER  # Default from email for sending emails
