@@ -15,6 +15,8 @@ urlpatterns = [
     #contact form
     path("contactform/", views.contact_form_view, name="contactform"),
     path("thank-you/", views.thank_you_view, name="thank_you"),
+    path("Privacy_Policy/", views.Privacy_Policy, name="Privacy_Policy"),
+    path('blogdetail/<slug>',views.blogdetail.as_view(), name='blogdetail'),
 
     # Example
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

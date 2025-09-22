@@ -21,7 +21,12 @@ def contact(request):
 class blog(View):
     def get(self, request):
         cdata = cmsblog.objects.all().order_by('id').reverse()
-        return render(request, 'blog.html', {'cdata':cdata})
+        return render(request, 'Blog/blog-grid.html', {'cdata':cdata})
+    
+class blogdetail(View):
+    def get(self,request,slug):
+        blogdata = cmsblog.objects.get(blog_title=slug)
+        return render(request,'Blog/blog-detail.html', {'blogdata':blogdata})
     
 def services(request):
     return render(request, 'our-service.html')
@@ -61,7 +66,8 @@ def contact_form_view(request):
 
     return render(request, "contact.html")
 
-
-
 def thank_you_view(request):
     return render(request, "thank_you.html")
+
+def Privacy_Policy(request):
+    return render(request,"privacy-policy.html")

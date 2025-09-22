@@ -93,9 +93,9 @@
             <div class="space20"></div>
             <div class="pera-arrow">
               <p>We help you find your ideal home at the right price, providing expe...</p>
-              <a href="{% url 'services' %}" class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
-                  <path d="M8.30499 19.0002H26.6374" stroke="#1B1B1B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M19.1899 11.5527L26.6375 19.0003L19.1899 26.4478" stroke="#1B1B1B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+              <a href="{% url 'services' %}" class="arrow" style="background-color: #f00d63;"><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                  <path d="M8.30499 19.0002H26.6374" stroke="#ffffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M19.1899 11.5527L26.6375 19.0003L19.1899 26.4478" stroke="#ffffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
                 </svg></a>
             </div>
           </div>
@@ -110,9 +110,9 @@
             <div class="space20"></div>
             <div class="pera-arrow">
               <p>Our marketing and negotiation strategies ensure you get the...</p>
-              <a href="{% url 'services' %}" class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
-                  <path d="M8.30499 19.0002H26.6374" stroke="#1B1B1B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M19.1899 11.5527L26.6375 19.0003L19.1899 26.4478" stroke="#1B1B1B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+              <a href="{% url 'services' %}" class="arrow" style="background-color: #f00d63;"><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                  <path d="M8.30499 19.0002H26.6374" stroke="#ffffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M19.1899 11.5527L26.6375 19.0003L19.1899 26.4478" stroke="#ffffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
                 </svg></a>
             </div>
           </div>
@@ -127,9 +127,9 @@
             <div class="space20"></div>
             <div class="pera-arrow">
               <p>Find the perfect rental property attract reliable tenants with ease.</p>
-              <a href="{% url 'services' %}" class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
-                  <path d="M8.30499 19.0002H26.6374" stroke="#1B1B1B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M19.1899 11.5527L26.6375 19.0003L19.1899 26.4478" stroke="#1B1B1B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+              <a href="{% url 'services' %}" class="arrow" style="background-color: #f00d63;"><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                  <path d="M8.30499 19.0002H26.6374" stroke="#ffffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M19.1899 11.5527L26.6375 19.0003L19.1899 26.4478" stroke="#ffffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
                 </svg></a>
             </div>
           </div>
@@ -144,7 +144,7 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-4">
-          <div class="heading1">
+          <div class="heading1" style="color: #f00d63;">
             <h5>About Company</h5>
             <div class="space16"></div>
             <h2 class="text-anime-style-3">Building Dreams,
@@ -233,10 +233,10 @@
               <div class="content-area">
                 <div class="rent-sale-area">
                   <ul>
-                    <li><a href="#">For Sale</a></li>
-                    <li><a href="#">New</a></li>
+                    <li><a href="{% url  'properties' %}">For Sale</a></li>
+                    <li><a href="{% url  'properties' %}">New</a></li>
                   </ul>
-                  <a href="#" class="camera"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
+                  <a href="{% url  'properties' %}" class="camera"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
                       <path d="M12 7.39995C12 8.75995 10.96 9.79995 9.6 9.79995C8.24 9.79995 7.2 8.75995 7.2 7.39995C7.2 6.03995 8.24 4.99995 9.6 4.99995C10.96 4.99995 12 6.03995 12 7.39995ZM16 3.39995V12.2C16 13.08 15.28 13.8 14.4 13.8H1.6C0.72 13.8 0 13.08 0 12.2V3.39995C0 2.51995 0.72 1.79995 1.6 1.79995V0.999951H4.8V1.79995H6.4L7.2 0.199951H12L12.8 1.79995H14.4C15.28 1.79995 16 2.51995 16 3.39995ZM4.4 4.99995C4.4 4.35995 3.84 3.79995 3.2 3.79995C2.56 3.79995 2 4.35995 2 4.99995C2 5.63995 2.56 6.19995 3.2 6.19995C3.84 6.19995 4.4 5.63995 4.4 4.99995ZM13.6 7.39995C13.6 5.15995 11.84 3.39995 9.6 3.39995C7.36 3.39995 5.6 5.15995 5.6 7.39995C5.6 9.63995 7.36 11.4 9.6 11.4C11.84 11.4 13.6 9.63995 13.6 7.39995Z" fill="#1B1B1B" />
                     </svg> 3</a>
                 </div>
@@ -276,9 +276,9 @@
                     </div>
                     <div class="love-share">
                       <a href="javascript:void(0)" class="heart"><img src="{% static 'assets/img/icons/heart2.svg' %}" alt="housa" class="heart1"> <img src="{% static 'assets/img/icons/heart1.svg' %}" alt="housa" class="heart2"></a>
-                      <a href="#" class="share"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                          <path d="M4.16028 13.8402L12.4566 5.54395" stroke="#ED8438" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                          <path d="M5.71594 5.54395H12.4567V12.2847" stroke="#ED8438" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      <a href="{% url  'properties' %}" class="share"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <path d="M4.16028 13.8402L12.4566 5.54395" stroke="#f00d63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M5.71594 5.54395H12.4567V12.2847" stroke="#f00d63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg></a>
                     </div>
                   </div>
@@ -336,8 +336,8 @@
                     <div class="love-share">
                       <a href="javascript:void(0)" class="heart"><img src="{% static 'assets/img/icons/heart2.svg' %}" alt="housa" class="heart1"> <img src="{% static 'assets/img/icons/heart1.svg' %}" alt="housa" class="heart2"></a>
                       <a href="#" class="share"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                          <path d="M4.16028 13.8402L12.4566 5.54395" stroke="#ED8438" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                          <path d="M5.71594 5.54395H12.4567V12.2847" stroke="#ED8438" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M4.16028 13.8402L12.4566 5.54395" stroke="#f00d63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M5.71594 5.54395H12.4567V12.2847" stroke="#f00d63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg></a>
                     </div>
                   </div>
@@ -395,8 +395,8 @@
                     <div class="love-share">
                       <a href="javascript:void(0)" class="heart"><img src="{% static 'assets/img/icons/heart2.svg' %}" alt="housa" class="heart1"> <img src="{% static 'assets/img/icons/heart1.svg' %}" alt="housa" class="heart2"></a>
                       <a href="#" class="share"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                          <path d="M4.16028 13.8402L12.4566 5.54395" stroke="#ED8438" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                          <path d="M5.71594 5.54395H12.4567V12.2847" stroke="#ED8438" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M4.16028 13.8402L12.4566 5.54395" stroke="#f00d63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M5.71594 5.54395H12.4567V12.2847" stroke="#f00d63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg></a>
                     </div>
                   </div>
@@ -454,8 +454,8 @@
                     <div class="love-share">
                       <a href="javascript:void(0)" class="heart"><img src="{% static 'assets/img/icons/heart2.svg' %}" alt="housa" class="heart1"> <img src="{% static 'assets/img/icons/heart1.svg' %}" alt="housa" class="heart2"></a>
                       <a href="#" class="share"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                          <path d="M4.16028 13.8402L12.4566 5.54395" stroke="#ED8438" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                          <path d="M5.71594 5.54395H12.4567V12.2847" stroke="#ED8438" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M4.16028 13.8402L12.4566 5.54395" stroke="#f00d63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M5.71594 5.54395H12.4567V12.2847" stroke="#f00d63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg></a>
                     </div>
                   </div>
@@ -513,8 +513,8 @@
                     <div class="love-share">
                       <a href="javascript:void(0)" class="heart"><img src="{% static 'assets/img/icons/heart2.svg' %}" alt="housa" class="heart1"> <img src="{% static 'assets/img/icons/heart1.svg' %}" alt="housa" class="heart2"></a>
                       <a href="#" class="share"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                          <path d="M4.16028 13.8402L12.4566 5.54395" stroke="#ED8438" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                          <path d="M5.71594 5.54395H12.4567V12.2847" stroke="#ED8438" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M4.16028 13.8402L12.4566 5.54395" stroke="#f00d63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M5.71594 5.54395H12.4567V12.2847" stroke="#f00d63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg></a>
                     </div>
                   </div>
@@ -572,8 +572,8 @@
                     <div class="love-share">
                       <a href="javascript:void(0)" class="heart"><img src="{% static 'assets/img/icons/heart2.svg' %}" alt="housa" class="heart1"> <img src="{% static 'assets/img/icons/heart1.svg' %}" alt="housa" class="heart2"></a>
                       <a href="#" class="share"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                          <path d="M4.16028 13.8402L12.4566 5.54395" stroke="#ED8438" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                          <path d="M5.71594 5.54395H12.4567V12.2847" stroke="#ED8438" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M4.16028 13.8402L12.4566 5.54395" stroke="#f00d63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M5.71594 5.54395H12.4567V12.2847" stroke="#f00d63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg></a>
                     </div>
                   </div>
@@ -631,8 +631,8 @@
                     <div class="love-share">
                       <a href="javascript:void(0)" class="heart"><img src="{% static 'assets/img/icons/heart2.svg' %}" alt="housa" class="heart1"> <img src="{% static 'assets/img/icons/heart1.svg' %}" alt="housa" class="heart2"></a>
                       <a href="#" class="share"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                          <path d="M4.16028 13.8402L12.4566 5.54395" stroke="#ED8438" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                          <path d="M5.71594 5.54395H12.4567V12.2847" stroke="#ED8438" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M4.16028 13.8402L12.4566 5.54395" stroke="#f00d63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M5.71594 5.54395H12.4567V12.2847" stroke="#f00d63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg></a>
                     </div>
                   </div>
@@ -690,8 +690,8 @@
                     <div class="love-share">
                       <a href="javascript:void(0)" class="heart"><img src="{% static 'assets/img/icons/heart2.svg' %}" alt="housa" class="heart1"> <img src="{% static 'assets/img/icons/heart1.svg' %}" alt="housa" class="heart2"></a>
                       <a href="#" class="share"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                          <path d="M4.16028 13.8402L12.4566 5.54395" stroke="#ED8438" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                          <path d="M5.71594 5.54395H12.4567V12.2847" stroke="#ED8438" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M4.16028 13.8402L12.4566 5.54395" stroke="#f00d63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M5.71594 5.54395H12.4567V12.2847" stroke="#f00d63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg></a>
                     </div>
                   </div>
@@ -749,8 +749,8 @@
                     <div class="love-share">
                       <a href="javascript:void(0)" class="heart"><img src="{% static 'assets/img/icons/heart2.svg' %}" alt="housa" class="heart1"> <img src="{% static 'assets/img/icons/heart1.svg' %}" alt="housa" class="heart2"></a>
                       <a href="#" class="share"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                          <path d="M4.16028 13.8402L12.4566 5.54395" stroke="#ED8438" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                          <path d="M5.71594 5.54395H12.4567V12.2847" stroke="#ED8438" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M4.16028 13.8402L12.4566 5.54395" stroke="#f00d63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M5.71594 5.54395H12.4567V12.2847" stroke="#f00d63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg></a>
                     </div>
                   </div>
@@ -1075,7 +1075,7 @@
                 <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
                     <path
                       d="M11.0003 6.83073H6.83366V10.9974C6.83366 11.2184 6.74586 11.4304 6.58958 11.5867C6.4333 11.7429 6.22134 11.8307 6.00033 11.8307C5.77931 11.8307 5.56735 11.7429 5.41107 11.5867C5.25479 11.4304 5.16699 11.2184 5.16699 10.9974V6.83073H1.00033C0.779312 6.83073 0.56735 6.74293 0.41107 6.58665C0.25479 6.43037 0.166992 6.21841 0.166992 5.9974C0.166992 5.77638 0.25479 5.56442 0.41107 5.40814C0.56735 5.25186 0.779312 5.16406 1.00033 5.16406H5.16699V0.997396C5.16699 0.776382 5.25479 0.56442 5.41107 0.40814C5.56735 0.25186 5.77931 0.164062 6.00033 0.164062C6.22134 0.164062 6.4333 0.25186 6.58958 0.40814C6.74586 0.56442 6.83366 0.776382 6.83366 0.997396V5.16406H11.0003C11.2213 5.16406 11.4333 5.25186 11.5896 5.40814C11.7459 5.56442 11.8337 5.77638 11.8337 5.9974C11.8337 6.21841 11.7459 6.43037 11.5896 6.58665C11.4333 6.74293 11.2213 6.83073 11.0003 6.83073Z"
-                      fill="#ED8438" />
+                      fill="#f00d63" />
                   </svg></a>
               </div>
             </div>
@@ -1103,7 +1103,7 @@
                 <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
                     <path
                       d="M11.0003 6.83073H6.83366V10.9974C6.83366 11.2184 6.74586 11.4304 6.58958 11.5867C6.4333 11.7429 6.22134 11.8307 6.00033 11.8307C5.77931 11.8307 5.56735 11.7429 5.41107 11.5867C5.25479 11.4304 5.16699 11.2184 5.16699 10.9974V6.83073H1.00033C0.779312 6.83073 0.56735 6.74293 0.41107 6.58665C0.25479 6.43037 0.166992 6.21841 0.166992 5.9974C0.166992 5.77638 0.25479 5.56442 0.41107 5.40814C0.56735 5.25186 0.779312 5.16406 1.00033 5.16406H5.16699V0.997396C5.16699 0.776382 5.25479 0.56442 5.41107 0.40814C5.56735 0.25186 5.77931 0.164062 6.00033 0.164062C6.22134 0.164062 6.4333 0.25186 6.58958 0.40814C6.74586 0.56442 6.83366 0.776382 6.83366 0.997396V5.16406H11.0003C11.2213 5.16406 11.4333 5.25186 11.5896 5.40814C11.7459 5.56442 11.8337 5.77638 11.8337 5.9974C11.8337 6.21841 11.7459 6.43037 11.5896 6.58665C11.4333 6.74293 11.2213 6.83073 11.0003 6.83073Z"
-                      fill="#ED8438" />
+                      fill="#f00d63" />
                   </svg></a>
               </div>
             </div>
@@ -1131,7 +1131,7 @@
                 <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
                     <path
                       d="M11.0003 6.83073H6.83366V10.9974C6.83366 11.2184 6.74586 11.4304 6.58958 11.5867C6.4333 11.7429 6.22134 11.8307 6.00033 11.8307C5.77931 11.8307 5.56735 11.7429 5.41107 11.5867C5.25479 11.4304 5.16699 11.2184 5.16699 10.9974V6.83073H1.00033C0.779312 6.83073 0.56735 6.74293 0.41107 6.58665C0.25479 6.43037 0.166992 6.21841 0.166992 5.9974C0.166992 5.77638 0.25479 5.56442 0.41107 5.40814C0.56735 5.25186 0.779312 5.16406 1.00033 5.16406H5.16699V0.997396C5.16699 0.776382 5.25479 0.56442 5.41107 0.40814C5.56735 0.25186 5.77931 0.164062 6.00033 0.164062C6.22134 0.164062 6.4333 0.25186 6.58958 0.40814C6.74586 0.56442 6.83366 0.776382 6.83366 0.997396V5.16406H11.0003C11.2213 5.16406 11.4333 5.25186 11.5896 5.40814C11.7459 5.56442 11.8337 5.77638 11.8337 5.9974C11.8337 6.21841 11.7459 6.43037 11.5896 6.58665C11.4333 6.74293 11.2213 6.83073 11.0003 6.83073Z"
-                      fill="#ED8438" />
+                      fill="#f00d63" />
                   </svg></a>
               </div>
             </div>
@@ -1159,7 +1159,7 @@
                 <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
                     <path
                       d="M11.0003 6.83073H6.83366V10.9974C6.83366 11.2184 6.74586 11.4304 6.58958 11.5867C6.4333 11.7429 6.22134 11.8307 6.00033 11.8307C5.77931 11.8307 5.56735 11.7429 5.41107 11.5867C5.25479 11.4304 5.16699 11.2184 5.16699 10.9974V6.83073H1.00033C0.779312 6.83073 0.56735 6.74293 0.41107 6.58665C0.25479 6.43037 0.166992 6.21841 0.166992 5.9974C0.166992 5.77638 0.25479 5.56442 0.41107 5.40814C0.56735 5.25186 0.779312 5.16406 1.00033 5.16406H5.16699V0.997396C5.16699 0.776382 5.25479 0.56442 5.41107 0.40814C5.56735 0.25186 5.77931 0.164062 6.00033 0.164062C6.22134 0.164062 6.4333 0.25186 6.58958 0.40814C6.74586 0.56442 6.83366 0.776382 6.83366 0.997396V5.16406H11.0003C11.2213 5.16406 11.4333 5.25186 11.5896 5.40814C11.7459 5.56442 11.8337 5.77638 11.8337 5.9974C11.8337 6.21841 11.7459 6.43037 11.5896 6.58665C11.4333 6.74293 11.2213 6.83073 11.0003 6.83073Z"
-                      fill="#ED8438" />
+                      fill="#f00d63" />
                   </svg></a>
               </div>
             </div>
@@ -1220,8 +1220,8 @@
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
                           <g clip-path="url(#clip0_6058_76061)">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M30 37.5L34 25.2273H30L30 15L40 15L40 25.2273L36 37.5H30Z" fill="#ED8438" />
-                            <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M12.5 37.5L16.5 25.2273H12.5L12.5 15L22.5 15L22.5 25.2273L18.5 37.5H12.5Z" fill="#ED8438" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M30 37.5L34 25.2273H30L30 15L40 15L40 25.2273L36 37.5H30Z" fill="#f00d63" />
+                            <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M12.5 37.5L16.5 25.2273H12.5L12.5 15L22.5 15L22.5 25.2273L18.5 37.5H12.5Z" fill="#f00d63" />
                           </g>
                           <defs>
                             <clipPath id="clip0_6058_76061">
@@ -1259,8 +1259,8 @@
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
                           <g clip-path="url(#clip0_6058_76061)">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M30 37.5L34 25.2273H30L30 15L40 15L40 25.2273L36 37.5H30Z" fill="#ED8438" />
-                            <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M12.5 37.5L16.5 25.2273H12.5L12.5 15L22.5 15L22.5 25.2273L18.5 37.5H12.5Z" fill="#ED8438" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M30 37.5L34 25.2273H30L30 15L40 15L40 25.2273L36 37.5H30Z" fill="#f00d63" />
+                            <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M12.5 37.5L16.5 25.2273H12.5L12.5 15L22.5 15L22.5 25.2273L18.5 37.5H12.5Z" fill="#f00d63" />
                           </g>
                           <defs>
                             <clipPath id="clip0_6058_76061b">
@@ -1298,8 +1298,8 @@
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
                           <g clip-path="url(#clip0_6058_76061)">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M30 37.5L34 25.2273H30L30 15L40 15L40 25.2273L36 37.5H30Z" fill="#ED8438" />
-                            <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M12.5 37.5L16.5 25.2273H12.5L12.5 15L22.5 15L22.5 25.2273L18.5 37.5H12.5Z" fill="#ED8438" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M30 37.5L34 25.2273H30L30 15L40 15L40 25.2273L36 37.5H30Z" fill="#f00d63" />
+                            <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M12.5 37.5L16.5 25.2273H12.5L12.5 15L22.5 15L22.5 25.2273L18.5 37.5H12.5Z" fill="#f00d63" />
                           </g>
                           <defs>
                             <clipPath id="clip0_6058_76061a">

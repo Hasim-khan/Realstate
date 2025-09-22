@@ -31,24 +31,24 @@
   <div class="about1-section-area">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-5">
+        {% comment %} <div class="col-lg-5">
           <div class="about-img1 image-anime reveal">
             <img src="{% static 'assets/img/all-images/about/about-img1.png' %}" alt="housa">
           </div>
-        </div>
-        <div class="col-lg-3">
+        </div> {% endcomment %}
+        <div class="col-lg-8">
           <div class="heading1">
             <div class="head">
               <h5>About Company</h5>
               <div class="space16"></div>
-              <h3>Empowering Your Real Estate Journey</h3>
+              <h3>At Realstate Properties, we make finding the perfect property simple and stress-free. From cozy homes to smart investments, we connect you with verified opportunities that suit your lifestyle and budget. Built on trust, transparency, and personalized service, we are here to help you turn every property into a future worth living.</h3>
             </div>
             <div class="space20"></div>
             <div class="perag-bg">
-              <p data-aos="fade-up" data-aos-duration="900">We are passionate about simplifying the real estate experience. Our expert team combines industry knowledge with a client-first approach to help you achieve your property goals. </p>
+              <p data-aos="fade-up" data-aos-duration="900">We simplify your real estate journey with expert guidance and a client-first approach—explore our properties today to find the one that fits your goals. </p>
               <div class="space32"></div>
               <div class="btn-area1" data-aos="fade-up" data-aos-duration="1000">
-                <a href="property-details-v1" class="vl-btn1">See Properties <span class="arrow1"><i class="fa-solid fa-arrow-right"></i></span><span class="arrow2"><i class="fa-solid fa-arrow-right"></i></span></a>
+                <a href=""{% url  'properties' %}"" class="vl-btn1">See Properties <span class="arrow1"><i class="fa-solid fa-arrow-right"></i></span><span class="arrow2"><i class="fa-solid fa-arrow-right"></i></span></a>
               </div>
             </div>
           </div>
@@ -85,18 +85,18 @@
           <div class="mission-heading heading1">
             <h2>Shaping the Future of Real Estate</h2>
             <div class="space16"></div>
-            <p>We are committed to providing expert guidance, cutting-edge technology, and personalized solutions that empower to clients make confident real estate decisions. Whether you’re searching for your dream home maximizing value of your property, we strive to deliver excellence, trust, and innovation at every step of the journey.</p>
+            <p>At Realstate Properties, we believe real estate should be simple, transparent, and rewarding. Our goal is to empower clients with trusted guidance, innovative solutions, and verified opportunities that help them make confident property decisions. Whether you’re looking for a dream home, an investment property, or a space to grow your business, we are committed to delivering excellence at every step.</p>
             <div class="space32"></div>
             <h3>Our Mission</h3>
             <div class="space16"></div>
-            <p>To simplify real estate transactions through innovation, transparency, and expert guidance, ensuring every client finds their dream property with ease.</p>
+            <p>To simplify real estate transactions by combining technology, expertise, and personalized service—ensuring that every client can discover and secure their ideal property with confidence and ease.</p>
             <div class="space32"></div>
             <h3>Our Vision</h3>
             <div class="space16"></div>
-            <p>To be the most trusted and innovative real estate platform, transforming the way people buy, sell, and invest in properties.</p>
+            <p>To become the most trusted and forward-thinking real estate partner, transforming the way people buy, sell, and invest in properties while building lasting relationships based on trust and value.</p>
             <div class="space32"></div>
             <div class="btn-area1">
-              <a href="property-details-v1" class="vl-btn1">See All Properties <span class="arrow1"><i class="fa-solid fa-arrow-right"></i></span><span class="arrow2"><i class="fa-solid fa-arrow-right"></i></span></a>
+              <a href="{% url  'properties' %}" class="vl-btn1">See All Properties <span class="arrow1"><i class="fa-solid fa-arrow-right"></i></span><span class="arrow2"><i class="fa-solid fa-arrow-right"></i></span></a>
             </div>
           </div>
         </div>
@@ -113,37 +113,37 @@
           <div class="heading1 text-center space-margin60">
             <h5>Why Choose Us</h5>
             <div class="space16"></div>
-            <h2>Why Choose Housa</h2>
+            <h2>Why Choose Realstate Properties</h2>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-6">
           <div class="choose-heading heading1">
-            <h2>Why Housa Stands Out</h2>
+            <h2>What Sets Realstate Properties Apart</h2>
             <div class="space16"></div>
-            <p>Choosing Housa means partnering with a real estate company that puts your needs first. We combine industry expertise, innovative technology, and a client-centric approach to simplify property transactions.</p>
+            <p>Partnering with Realstate Properties means working with a real estate company that values your goals above all else. We leverage industry expertise, cutting-edge technology, and a personalized approach to make property decisions seamless and rewarding.</p>
             <div class="space24"></div>
             <div class="choose-box">
-              <a href="our-service">Expert Guidance</a>
+              <a href="our-service">Professional Guidance</a>
               <div class="space16"></div>
               <p>Our team of real estate professionals is dedicated to providing the best market insights and tailored advice.</p>
             </div>
             <div class="space24"></div>
             <div class="choose-box">
-              <a href="our-service">Wide Property Listings</a>
+              <a href="our-service">Extensive Property Options</a>
               <div class="space16"></div>
-              <p>From modern apartments to luxury villas, we offer diverse listings to match your preferences.</p>
+              <p>From contemporary apartments to upscale villas, we offer a wide selection of properties to suit every lifestyle and preference.</p>
             </div>
             <div class="space24"></div>
             <div class="choose-box">
-              <a href="our-service">Clients-Centric Approach</a>
+              <a href="our-service">Client-Focused Service</a>
               <div class="space16"></div>
-              <p>Your needs come first, and we ensure a smooth, stress-free real estate experience.</p>
+              <p>Your priorities come first. We strive to make every real estate transaction smooth, transparent, and stress-free..</p>
             </div>
             <div class="space32"></div>
             <div class="btn-area1">
-              <a href="contact" class="vl-btn1">Contact Us <span class="arrow1"><i class="fa-solid fa-arrow-right"></i></span><span class="arrow2"><i class="fa-solid fa-arrow-right"></i></span></a>
+              <a href="{% url 'contact' %}" class="vl-btn1">Contact Us <span class="arrow1"><i class="fa-solid fa-arrow-right"></i></span><span class="arrow2"><i class="fa-solid fa-arrow-right"></i></span></a>
             </div>
           </div>
         </div>
@@ -165,7 +165,7 @@
   <div class="space30"></div>
   <!--===== PROPERTY AREA STARTS =======-->
   <div class="property1">
-    <div class="container-fluid">
+    {% comment %} <div class="container-fluid">
       <div class="row">
         <div class="col-lg-9 m-auto">
           <div class="heading1 text-center">
@@ -3197,12 +3197,12 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> {% endcomment %}
   </div>
   <!--===== PROPERTY AREA ENDS =======-->
   <div class="space30"></div>
   <!--===== TEAM AREA STARTS =======-->
-  <div class="team1">
+  {% comment %} <div class="team1">
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-9 m-auto">
@@ -3316,7 +3316,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> {% endcomment %}
   <!--===== TEAM AREA ENDS =======-->
   <div class="space30"></div>
   <!--===== TESTIMONIAL AREA STARTS =======-->
@@ -3341,21 +3341,21 @@
                     <img src="{% static 'assets/img/icons/quito1.svg' %}" alt="housa">
                     <div class="space16"></div>
                     <p class="text">
-                      "Housa made our home-buying process so smooth! Their agents were knowledgeable and supportive at every step. We couldn’t be happier with our new home!"
+                      "Realstate Properties made our home search effortless! Their team was attentive, knowledgeable, and truly understood what we were looking for. We’re beyond happy with our new home"
                     </p>
                   </div>
                   <div class="bottom">
                     <div class="info">
                       <img src="{% static 'assets/img/all-images/testimonial/testimonial-img9.png' %}" alt="housa">
                       <div class="content">
-                        <h6 class="name"><a href="#">Sheldon Jackson</a></h6>
+                        <h6 class="name"><a href="#">Naveen Nagar</a></h6>
                         <p class="position">Shop Store Owner</p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide">
+              {% comment %} <div class="swiper-slide">
                 <div class="testimonials-box-2">
                   <div class="content-area">
                     <img src="{% static 'assets/img/icons/quito1.svg' %}" alt="housa">
@@ -3374,14 +3374,14 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> {% endcomment %}
               <div class="swiper-slide">
                 <div class="testimonials-box-2">
                   <div class="content-area">
                     <img src="{% static 'assets/img/icons/quito1.svg' %}" alt="housa">
                     <div class="space16"></div>
                     <p class="text">
-                      "Housa made our home-buying process so smooth! Their agents were knowledgeable and supportive at every step. We couldn’t be happier with our new home!"
+                      "Buying a house felt overwhelming until we worked with Realstate Properties. They guided us with patience and made the entire journey smooth and stress-free."
                     </p>
                   </div>
                   <div class="bottom">
@@ -3401,7 +3401,7 @@
                     <img src="{% static 'assets/img/icons/quito1.svg' %}" alt="housa">
                     <div class="space16"></div>
                     <p class="text">
-                      "Housa made our home-buying process so smooth! Their agents were knowledgeable and supportive at every step. We couldn’t be happier with our new home!"
+                      "From the first viewing to closing the deal, Realstate Properties handled everything with professionalism. They made sure we felt supported at every step."
                     </p>
                   </div>
                   <div class="bottom">
@@ -3421,7 +3421,7 @@
                     <img src="{% static 'assets/img/icons/quito1.svg' %}" alt="housa">
                     <div class="space16"></div>
                     <p class="text">
-                      "Housa made our home-buying process so smooth! Their agents were knowledgeable and supportive at every step. We couldn’t be happier with our new home!"
+                      "As first-time buyers, we had so many questions. The Realstate Properties team answered them all and gave us the confidence to make the right decision."
                     </p>
                   </div>
                   <div class="bottom">
@@ -3441,14 +3441,14 @@
                     <img src="{% static 'assets/img/icons/quito1.svg' %}" alt="housa">
                     <div class="space16"></div>
                     <p class="text">
-                      "Housa made our home-buying process so smooth! Their agents were knowledgeable and supportive at every step. We couldn’t be happier with our new home!"
+                      "Realstate Properties treated us like family. Their honesty and dedication helped us find a home that was perfect for us. Couldn’t have asked for a better experience"
                     </p>
                   </div>
                   <div class="bottom">
                     <div class="info">
                       <img src="{% static 'assets/img/all-images/testimonial/testimonial-img14.png' %}" alt="housa">
                       <div class="content">
-                        <h6 class="name"><a href="#">Marc Casado</a></h6>
+                        <h6 class="name"><a href="#">Dushyant Nagar</a></h6>
                         <p class="position">Shop Store Owner</p>
                       </div>
                     </div>

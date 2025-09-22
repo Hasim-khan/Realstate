@@ -83,7 +83,7 @@
             <div class="footer-time-area">
               <img src="{% static 'assets/img/logo/logo1.png' %}" alt="housa">
               <div class="space24"></div>
-              <p>We are committed to making your real estate journey seamless and stress-free. Whether you’re buying, selling, or renting every step the way.</p>
+              <p>We strive to make your real estate experience smooth and hassle-free. Whether you're looking to buy, sell, or rent, we're here to guide you through every step of the process</p>
               <div class="space32"></div>
               <ul>
                 <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
@@ -150,7 +150,7 @@
                           <rect width="20" height="20" fill="white" />
                         </clipPath>
                       </defs>
-                    </svg> DemoHousa.com</a></li>
+                    </svg> RealstateProperties.In</a></li>
               </ul>
             </div>
           </div>
@@ -160,8 +160,8 @@
           <div class="copyright-area">
             <p>© 2025 Housa, Inc. All Rights Reserved.</p>
             <ul>
-              <li><a href="privacy-policy">Privacy Policy</a><span> | </span></li>
-              <li><a href="privacy-policy">Terms Of Condition</a></li>
+              <li><a href="{% url  'Privacy_Policy' %}">Privacy Policy</a><span> | </span></li>
+              <li><a href="{% url  'Privacy_Policy' %}">Terms Of Condition</a></li>
             </ul>
           </div>
         </div>
@@ -170,7 +170,7 @@
   </div>
   <!--===== FOOTER AREA ENDS =======-->
   <!--===== OTHERS AREA STARTS =======-->
-  <div class="others-section-area d-none" data-aos="fade-up" data-aos-duration="1000">
+  {% comment %} <div class="others-section-area d-none" data-aos="fade-up" data-aos-duration="1000">
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-12">
@@ -518,7 +518,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> {% endcomment %}
   <!--===== OTHERS AREA STARTS =======-->
   <!--===== JS SCRIPT LINK =======-->
   <script src="{% static 'assets/js/plugins/jquery-3-7-1.min.js' %}"></script>
