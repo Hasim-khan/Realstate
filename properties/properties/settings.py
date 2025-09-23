@@ -37,10 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
     'app1',
     'ckeditor',
-    'sweetify'
+    'sweetify',
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -129,9 +133,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = (str(BASE_DIR.joinpath('static')),) 
+# STATICFILES_DIRS = (str(BASE_DIR.joinpath('static')),) 
+STATICFILES_DIRS = [BASE_DIR / "static"]
 
 # Media files (User-uploaded content)
 MEDIA_URL = '/media/'
@@ -148,6 +153,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'sumitnagar6777@gmail.com'  # Your email address         
-EMAIL_HOST_PASSWORD = 'txqf udej vxvw uehb'  # Your email password
+EMAIL_HOST_USER = ''  # Your email address         
+EMAIL_HOST_PASSWORD = ''  # Your email password
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER  # Default from email for sending emails

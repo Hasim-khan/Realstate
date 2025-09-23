@@ -3,12 +3,26 @@ from . import views
 from django.conf.urls.static import static
 from django.conf import settings
 from django.views.static import serve
+from django.contrib.sitemaps.views import sitemap
+# from app1.sitemaps import BlogSitemap
+# sitemaps = {
+#     'blog': BlogSitemap,
+# }
+
 urlpatterns = [
     path('', views.index, name='home'), 
     path('home/', views.index, name='home'),
     path('about/', views.about, name='about'),
     path('contact/', views.contact, name='contact'),
+    #Blogs
     path('blog/', views.blog.as_view(), name='blog'),
+    path('blogdetail/<slug>',views.blogdetail.as_view(), name='blogdetail'),
+    #site map
+    path('sitemap/', views.human_sitemap, name='human_sitemap'),
+
+    # path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
+
+
     path('services/', views.services, name='services'),
     path('properties/', views.properties, name='properties'),
 
@@ -16,7 +30,6 @@ urlpatterns = [
     path("contactform/", views.contact_form_view, name="contactform"),
     path("thank-you/", views.thank_you_view, name="thank_you"),
     path("Privacy_Policy/", views.Privacy_Policy, name="Privacy_Policy"),
-    path('blogdetail/<slug>',views.blogdetail.as_view(), name='blogdetail'),
 
     # Example
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

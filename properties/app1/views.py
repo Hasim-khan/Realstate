@@ -7,8 +7,15 @@ from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 import sweetify
-
+from django.shortcuts import render, get_object_or_404
 # Create your views here.
+
+from django.contrib.sitemaps import Sitemap
+from app1.sitemaps import BlogSitemap
+
+sitemaps = {
+    'blogs': BlogSitemap,
+}
 def index(request):
     return render(request, 'index.html')
 
@@ -71,3 +78,24 @@ def thank_you_view(request):
 
 def Privacy_Policy(request):
     return render(request,"privacy-policy.html")
+
+
+
+def human_sitemap(request):
+    posts = cmsblog.objects.all().order_by('-blogdate')
+    return render(request, 'sitemaps/sitemap.html', {'posts': posts})
+
+def custom_sitemap_view(request):
+    response = HttpResponse(content_type='application/xml')
+    response.write('<?xml version="1.0" encoding="UTF-8"?>\n')
+    response.write('<?xml-stylesheet type="text/xsl" href="/static/sitemap.xsl"?>\n')
+    response.write('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
+    for url in sitemaps['blogs']().items():
+        response.write(f'<url>\n')
+        response.write(f'  <loc>{url.get_absolute_url()}</loc>\n')
+        response.write(f'  <lastmod>{url.blogdate}</lastmod>\n')
+        response.write(f'  <changefreq>weekly</changefreq>\n')
+        response.write(f'  <priority>0.8</priority>\n')
+        response.write('</url>\n')
+    response.write('</urlset>\n')
+    return response

@@ -2,6 +2,7 @@ from django.db import models
 from django.utils import timezone
 from ckeditor.fields import RichTextField
 from autoslug import AutoSlugField
+from django.urls import reverse
 # Create your models here.
 
 class cmsblog(models.Model):
@@ -11,6 +12,12 @@ class cmsblog(models.Model):
     blogdate= models.DateTimeField(default=timezone.now)
     blog_title = AutoSlugField(populate_from='title', unique=True, null=True, blank=False)
 
+    
+    def __str__(self):
+        return self.title
+
+    def get_absolute_url(self):
+        return reverse("blogdetail", args=[self.blog_title])
 
 class ContactMessage(models.Model):
     first_name = models.CharField(max_length=100)
