@@ -30,3 +30,25 @@ class ContactMessage(models.Model):
 
     def __str__(self):
         return f"{self.first_name} {self.last_name} - {self.email}"
+    
+
+
+class Property(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    location = models.CharField(max_length=200)
+    price = models.DecimalField(max_digits=12, decimal_places=2)
+    status = models.CharField(max_length=20, choices=(('sale','For Sale'),('rent','For Rent')), default='sale')
+    created_at = models.DateTimeField(auto_now_add=True)
+    property_title = AutoSlugField(populate_from='title', unique=True, null=True, blank=False)
+
+
+    def __str__(self):
+        return self.title
+
+class PropertyImage(models.Model):
+    property = models.ForeignKey(Property, related_name='images', on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='property_images/')
+
+    def __str__(self):
+        return f"{self.property.title} Image"

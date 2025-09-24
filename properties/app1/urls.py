@@ -21,16 +21,15 @@ urlpatterns = [
     path('sitemap/', views.human_sitemap, name='human_sitemap'),
 
     # path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
-
-
     path('services/', views.services, name='services'),
-    path('properties/', views.properties, name='properties'),
-
+    #cms for property
+    path('properties/', views.properties.as_view(), name='properties'),
+    path('property_detail/<slug>', views.property_detail.as_view(), name='property_detail'),
     #contact form
     path("contactform/", views.contact_form_view, name="contactform"),
     path("thank-you/", views.thank_you_view, name="thank_you"),
     path("Privacy_Policy/", views.Privacy_Policy, name="Privacy_Policy"),
-
+    # path("error_page/", views.custom_404_view, name="error_404"),
     # Example
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

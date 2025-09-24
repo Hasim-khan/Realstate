@@ -19,6 +19,8 @@ from django.urls import path, include
 from django.contrib.sitemaps.views import sitemap
 from app1.sitemaps import BlogSitemap  
 from app1.views import custom_sitemap_view
+from app1 import views as app1_views
+handler404 = app1_views.custom_404
 
 sitemaps = {
     'blogs': BlogSitemap,

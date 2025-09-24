@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from django.views import View
 from app1.models import *
@@ -7,7 +7,6 @@ from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 import sweetify
-from django.shortcuts import render, get_object_or_404
 # Create your views here.
 
 from django.contrib.sitemaps import Sitemap
@@ -25,21 +24,37 @@ def about(request):
 def contact(request):
     return render(request, 'contact.html')
 
+
+# cms for the blog
 class blog(View):
     def get(self, request):
         cdata = cmsblog.objects.all().order_by('id').reverse()
         return render(request, 'Blog/blog-grid.html', {'cdata':cdata})
     
 class blogdetail(View):
-    def get(self,request,slug):
-        blogdata = cmsblog.objects.get(blog_title=slug)
-        return render(request,'Blog/blog-detail.html', {'blogdata':blogdata})
-    
+    def get(self, request, slug):
+        blogdata = get_object_or_404(cmsblog, blog_title=slug)
+        return render(request, 'Blog/blog-detail.html', {'blogdata': blogdata})
+
+#cms for the Property
+# List all properties
+class properties(View):
+    def get(self, request):
+        properties = Property.objects.all().order_by('id').reverse()
+        return render(request, 'properties/property.html', {'properties': properties})  
+
+class property_detail(View):
+    def get(self, request, slug):
+        property = get_object_or_404(Property, property_title=slug)
+        total_properties = Property.objects.count()
+        return render(request, 'properties/property-details.html', {'property': property, 'total_properties': total_properties})    
+
+# def properties(request):
+#     return render(request, 'properties/property.html')
+
 def services(request):
     return render(request, 'our-service.html')
 
-def properties(request):
-    return render(request, 'property-halfmap-grid.html')
 
 
 def contact_form_view(request):
@@ -99,3 +114,9 @@ def custom_sitemap_view(request):
         response.write('</url>\n')
     response.write('</urlset>\n')
     return response
+
+
+def custom_404(request, exception):
+    return render(request, "errorpage/404.html", status=404)
+
+
