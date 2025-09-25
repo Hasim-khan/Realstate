@@ -11,7 +11,7 @@
           <div class="inner-header heading1">
             <h2>Blog Details</h2>
             <div class="space28"></div>
-            <p><a href="index-2.html">Home <svg xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 16" fill="none">
+            <p><a href="{% url 'home' %}">Home <svg xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 16" fill="none">
                   <path d="M1.5 1.74997L7.75 7.99997L1.5 14.25" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg> Our Blog</a> <svg xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 16" fill="none">
                 <path d="M1.5 1.74997L7.75 7.99997L1.5 14.25" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -35,7 +35,7 @@
         <div class="col-lg-4">
           <div class="blog-siderbar">
             <div class="all-category">
-              <div class="search-area">
+              {% comment %} <div class="search-area">
                 <h3>Search Blog</h3>
                 <div class="space24"></div>
                 <form>
@@ -46,7 +46,7 @@
                         stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg></button>
                 </form>
-              </div>
+              </div> {% endcomment %}
               <div class="space30"></div>
               <div class="categories-area">
                 <h3>Blog Category</h3>
@@ -75,7 +75,7 @@
                 </ul>
               </div>
               <div class="space30"></div>
-              <div class="posts-area">
+              {% comment %} <div class="posts-area">
                 <h3>Featured Post</h3>
                 <div class="post-auhtor-area">
                   <div class="img1">
@@ -197,7 +197,7 @@
                     <a href="#" class="readmore">Read More <i class="fa-solid fa-arrow-right"></i></a>
                   </div>
                 </div>
-              </div>
+              </div> {% endcomment %}
               <div class="space30"></div>
               <div class="tags-area">
                 <h3>Popular Tags</h3>
@@ -291,14 +291,14 @@
                   <div class="space16"></div>
                   <p>Pricing your property competitively is crucial. Research the local market and set an price that attracts buyers while maximizing your profit. Professional photography and virtual tours can make your listing stand out best online, reaching a wider audience. Additionally, leverage multiple platforms, including real estate websites.</p>
                   <div class="space30"></div>
-                  <div class="vide-images">
+                  {% comment %} <div class="vide-images">
                     <div class="img1">
                       <img src="{% static 'assets/img/all-images/blog/blog-img19.png' %}" alt="housa">
                     </div>
                     <a href="https://www.youtube.com/watch?v=lXKcNihsUZY" class="popup-youtube"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M6 20.1957V3.80421C6 3.01878 6.86395 2.53993 7.53 2.95621L20.6432 11.152C21.2699 11.5436 21.2699 12.4563 20.6432 12.848L7.53 21.0437C6.86395 21.46 6 20.9812 6 20.1957Z"></path>
                       </svg></a>
-                  </div>
+                  </div> {% endcomment %}
                   <div class="space28"></div>
                   <h3>Explore Our Properties Through Virtual Tours</h3>
                   <div class="space18"></div>
@@ -306,7 +306,7 @@
                   <div class="space16"></div>
                   <p>Why wait for visit when you can explore stunning properties right now? Our immersive video tours take you inside finest homes, showcasing every detail—from elegant interiors to scenic surroundings you're looking.</p>
                   <div class="space32"></div>
-                  <div class="tags-social">
+                  {% comment %} <div class="tags-social">
                     <div class="tags">
                       <ul>
                         <li>Tags:</li>
@@ -344,8 +344,8 @@
                     </div>
                     <div class="space16"></div>
                     <p>Thank you for exploring our properties! We value your feedback questions about our listings. Whether you're interested in scheduling a tour, learning more about our locations, or discovering the amenities we offer, this is the.</p>
-                  </div>
-                  <div class="space30"></div>
+                  </div> {% endcomment %}
+                  {% comment %} <div class="space30"></div>
                   <div class="comments-boxarea box2">
                     <div class="comments-boxes">
                       <div class="comments-auhtor-box">
@@ -363,8 +363,8 @@
                     </div>
                     <div class="space16"></div>
                     <p>Thank you so much for your interest and thoughtful comment! We’re the thrilled to hear you’re considering our properties and would love to best assist you further. If you’re interested in a specific listing, we’d be happy.</p>
-                  </div>
-                  <div class="space30"></div>
+                  </div> {% endcomment %}
+                  {% comment %} <div class="space30"></div>
                   <h3>Leave A Reply Now</h3>
                   <div class="space32"></div>
                   <div class="contact-boxarea">
@@ -393,7 +393,7 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> {% endcomment %}
                 </div>
               </div>
             </div>

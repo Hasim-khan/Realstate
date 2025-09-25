@@ -9,13 +9,13 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="inner-header heading1">
-            <h2>Properties Details 4</h2>
+            <h2>Properties Details </h2>
             <div class="space28"></div>
             <p><a href="{% url 'home' %}">Home</a> <svg xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 16" fill="none">
                 <path d="M1.5 1.74997L7.75 7.99997L1.5 14.25" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg> <span>Listing</span> <svg xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 16" fill="none">
                 <path d="M1.5 1.74997L7.75 7.99997L1.5 14.25" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg> Properties Details 4</p>
+              </svg> Properties Details </p>
           </div>
         </div>
         <div class="col-lg-6">
@@ -28,7 +28,7 @@
   </div>
   <!--===== HERO AREA ENDS =======-->
   <!--===== PROPERTIES AREA STARTS =======-->
-  <div class="listing-property-area sp1">
+  {% comment %} <div class="listing-property-area sp1">
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-12">
@@ -94,7 +94,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> {% endcomment %}
   <!--===== PROPERTIES AREA ENDS =======-->
   <!--===== PROPERTY AREA STARTS =======-->
   <div class="property-inner-section-find">
@@ -114,7 +114,7 @@
                         <img src="{% static 'assets/img/all-images/others/others-img7.png' %}" alt="housa">
                       </div>
                       <div class="content">
-                        <a href="#">Shagor Ahmed</a>
+                        <a href="#">Sumit Nagar</a>
                         <a href="mailto:shagorahmed@.com"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM20 7.23792L12.0718 14.338L4 7.21594V19H20V7.23792ZM4.51146 5L12.0619 11.662L19.501 5H4.51146Z"></path>
                           </svg>shagorahmed@.com</a>
@@ -126,7 +126,38 @@
                       </div>
                     </div>
                     <div class="space10"></div>
-                    <div class="input-area">
+                      <!-- Contact Form -->
+                    <form method="post" action="{% url 'contactform' %}">
+                      {% csrf_token %}
+                      <div class="input-area">
+                        <input type="text" name="first_name" placeholder="Your Name" required>
+                      </div>
+                      <div class="input-area">
+                        <input type="text" name="last_name" placeholder="Last Name*">
+                      </div>
+                      <div class="input-area">
+                        <input type="number" name="phone" placeholder="Phone Number">
+                      </div>
+                      <div class="input-area">
+                        <input type="email" name="email" placeholder="Email Address*" required>
+                      </div>
+                      <div class="input-area">
+                        <input type="text" name="service_type" placeholder="Service Type*">
+                      </div>
+                      <div class="input-area">
+                        <textarea name="message" placeholder="Your Message"></textarea>
+                      </div>
+                      <div class="input-area">
+                        <button type="submit" class="vl-btn1">
+                          Submit Now
+                          <span class="arrow1"><i class="fa-solid fa-arrow-right"></i></span>
+                          <span class="arrow2"><i class="fa-solid fa-arrow-right"></i></span>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+
+                    {% comment %} <div class="input-area">
                       <input type="text" placeholder="Full Name">
                     </div>
                     <div class="input-area">
@@ -142,8 +173,8 @@
                       <button type="submit" class="vl-btn1">View More Property <span class="arrow1"><i class="fa-solid fa-arrow-right"></i></span><span class="arrow2"><i class="fa-solid fa-arrow-right"></i></span></button>
                     </div>
                   </div>
-                  <div class="space30"></div>
-                  <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                  <div class="space30"></div> {% endcomment %}
+                  {% comment %} <ul class="nav nav-pills" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
                       <button class="nav-link active" id="pills-home1-tab" data-bs-toggle="pill" data-bs-target="#pills-home1" type="button" role="tab" aria-controls="pills-home1" aria-selected="true">
                         For Rent
@@ -154,8 +185,8 @@
                         For Sale
                       </button>
                     </li>
-                  </ul>
-                  <div class="tab-content" id="pills-tabContent">
+                  </ul> {% endcomment %}
+                  {% comment %} <div class="tab-content" id="pills-tabContent">
                     <div class="tab-pane fade show active" id="pills-home1" role="tabpanel" aria-labelledby="pills-home1-tab" tabindex="0">
                       <div class="row">
                         <div class="col-lg-12">
@@ -541,8 +572,8 @@
                       </div>
                     </div>
                   </div>
-                  <div class="space30"></div>
-                  <div class="property-latest">
+                  <div class="space30"></div> {% endcomment %}
+                  {% comment %} <div class="property-latest">
                     <h3>Recent Properties</h3>
                     <div class="space8"></div>
                     <div class="latest-proprty">
@@ -641,20 +672,26 @@
                         <h3>$950,000</h3>
                       </div>
                     </div>
-                  </div>
+                  </div> {% endcomment %}
                   <div class="space30 d-lg-none d-block"></div>
                 </div>
               </div>
               <div class="col-lg-9">
                 <div class="property-widget-sidebar">
+                  {% for img in property.images.all %}
                   <div class="img1">
-                    <img src="{% static 'assets/img/all-images/properties/property-img25.png' %}" alt="housa">
+                    <img src="{{ img.image.url }}" alt="{{ property.title }}">
                   </div>
+                  {% empty %}
+                  <div class="img1">
+                    <img src="{% static 'assets/img/all-images/properties/default-property.png' %}" alt="{{ property.title }}">
+                  </div>
+                  {% endfor %}
                   <div class="space40"></div>
                   <div class="padding-side">
                     <h3>About This Property</h3>
                     <div class="space24"></div>
-                    <p>This stunning Apartment is located in the heart of Woodland, offering the perfect blend of modern comfort and timeless elegance. Designed for both functionality and style, this property features spacious rooms, high-quality finishes, and an inviting atmosphere that feels like home. Whether you're looking for a peaceful retreat or a prime investment opportunity, this property is a must-see.</p>
+                    <p>{{property.description}}</p>
                     <div class="space30"></div>
                     <h3>What Makes This Property Special</h3>
                     <div class="space12"></div>
@@ -663,7 +700,7 @@
                         <div class="others-box">
                           <img src="{% static 'assets/img/icons/check1.svg' %}" alt="housa">
                           <div class="text">
-                            <p><span>Modern Interior & Finishes:</span> High-quality materials and contemporary designs.</p>
+                            <p><span>Nagar Properties – Modern Interiors & Premium Finishes :</span> Experience contemporary living with stylish interiors and high-quality materials. Every detail has been thoughtfully crafted to offer elegance and comfort, creating a space that feels truly special.</p>
                           </div>
                         </div>
                       </div>
@@ -671,7 +708,7 @@
                         <div class="others-box">
                           <img src="{% static 'assets/img/icons/check1.svg' %}" alt="housa">
                           <div class="text">
-                            <p><span>Spacious Layout:</span> Open-concept living areas and well-planned spaces.</p>
+                            <p><span>Nagar Properties – Spacious & Functional Layout:</span>Designed for modern lifestyles, the open-concept living areas allow for easy movement and flexibility. Whether entertaining guests or enjoying quiet family time, the layout maximizes space and usability.</p>
                           </div>
                         </div>
                       </div>
@@ -679,7 +716,7 @@
                         <div class="others-box">
                           <img src="{% static 'assets/img/icons/check1.svg' %}" alt="housa">
                           <div class="text">
-                            <p><span> Prime Location:</span> Close to schools shopping, and public transport location.</p>
+                            <p><span> Nagar Properties – Prime & Convenient Location:</span> Situated in a sought-after neighborhood, you’ll be close to schools, shopping centers, restaurants, and public transport. Everything you need is within easy reach, making daily life effortless.</p>
                           </div>
                         </div>
                       </div>
@@ -687,7 +724,7 @@
                         <div class="others-box">
                           <img src="{% static 'assets/img/icons/check1.svg' %}" alt="housa">
                           <div class="text">
-                            <p><span>Energy Efficient:</span> Equipped with smart home features and sustainable elements.</p>
+                            <p><span>Nagar Properties – Smart & Energy-Efficient Living:</span> Equipped with energy-saving features and smart home technology, this property combines sustainability with convenience. Enjoy modern comforts while reducing your environmental footprint.</p>
                           </div>
                         </div>
                       </div>
@@ -695,7 +732,15 @@
                         <div class="others-box">
                           <img src="{% static 'assets/img/icons/check1.svg' %}" alt="housa">
                           <div class="text">
-                            <p><span>Secure & Private: </span> Gated community security features for peace of mind.</p>
+                            <p><span>Nagar Properties – Secure & Private: </span> Located within a gated community, the apartment offers advanced security features and privacy. Feel safe and relaxed in a home that prioritizes your peace of mind..</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="others-box">
+                          <img src="{% static 'assets/img/icons/check1.svg' %}" alt="housa">
+                          <div class="text">
+                            <p><span>Lifestyle & Community: </span> Living at Nagar Properties offers more than a home—it’s a vibrant lifestyle. With nearby parks, amenities, and recreational facilities, residents enjoy convenience, comfort, and a sense of community in a serene and welcoming environment.</p>
                           </div>
                         </div>
                       </div>
@@ -751,7 +796,7 @@
                         <div class="others-box">
                           <img src="{% static 'assets/img/icons/check1.svg' %}" alt="housa">
                           <div class="text">
-                            <p><span>Schools:</span> Apartment Nearby Schools</p>
+                            <p><span>Schools:</span> Conveniently located near quality schools, ensuring your children have easy access to excellent education.</p>
                           </div>
                         </div>
                       </div>
@@ -759,7 +804,7 @@
                         <div class="others-box">
                           <img src="{% static 'assets/img/icons/check1.svg' %}" alt="housa">
                           <div class="text">
-                            <p><span>Healthcare: </span> Nearby Hospitals and Clinic.</p>
+                            <p><span>Healthcare: </span>Close to hospitals, clinics, and medical centers, providing peace of mind for you and your family.</p>
                           </div>
                         </div>
                       </div>
@@ -767,8 +812,7 @@
                         <div class="others-box">
                           <img src="{% static 'assets/img/icons/check1.svg' %}" alt="housa">
                           <div class="text">
-                            <p><span> Transport:</span> Metro, Bus Station, Highway
-                              & Nearby International Airport.</p>
+                            <p><span> Transport:</span> Well-connected with nearby metro stations, bus stops, highways, and even an international airport, making commuting effortless.</p>
                           </div>
                         </div>
                       </div>
@@ -776,7 +820,7 @@
                         <div class="others-box">
                           <img src="{% static 'assets/img/icons/check1.svg' %}" alt="housa">
                           <div class="text">
-                            <p><span>Shopping & Entertainment: </span> Malls, Markets, Entertainment Centers.</p>
+                            <p><span>Shopping & Entertainment: </span> Enjoy easy access to shopping malls, local markets, and entertainment hubs, keeping everything you need within reach.</p>
                           </div>
                         </div>
                       </div>
@@ -784,14 +828,14 @@
                         <div class="others-box">
                           <img src="{% static 'assets/img/icons/check1.svg' %}" alt="housa">
                           <div class="text">
-                            <p><span>Park & Recreation: </span> Parks Sport Center, Fitness Club, Swimming Center.</p>
+                            <p><span>Park & Recreation: </span> Stay active and unwind at nearby parks, sports centers, fitness clubs, and swimming facilities, all just minutes away.</p>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="space30"></div>
-                    <h3>Floor Plan</h3>
-                    <div class="accordion-area">
+                    {% comment %} <div class="space30"></div>
+                    <h3>Floor Plan</h3> {% endcomment %}
+                    {% comment %} <div class="accordion-area">
                       <div class="accordion accordion-flush" id="accordionFlushExample">
                         <div class="accordion-item">
                           <h2 class="accordion-header">
@@ -860,13 +904,13 @@
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="space30"></div>
+                    </div> {% endcomment %}
+                    {% comment %} <div class="space30"></div>
                     <h3>Schedule A Viewing Book a Tour Today!</h3>
                     <div class="space24"></div>
                     <p>Interested in this property? Contact us today to schedule a viewing and experience it for yourself. Our real estate experts are here to guide you every step of the way.</p>
-                    <div class="space32"></div>
-                    <div class="contact-boxarea ms-0">
+                    <div class="space32"></div> {% endcomment %}
+                    {% comment %} <div class="contact-boxarea ms-0">
                       <h3>Get In Touch Now</h3>
                       <div class="space8"></div>
                       <div class="row">
@@ -902,7 +946,7 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> {% endcomment %}
                     <div class="space16"></div>
                     <div class="contact-box">
                       <span><svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none">
@@ -955,28 +999,28 @@
                       <ul>
                         <li>
                           <span>Address:</span>
-                          <div>CA, USA</div>
+                          <div>World Street , Faridabad</div>
                         </li>
                         <li>
                           <span>City:</span>
-                          <div>Los Angeles</div>
+                          <div>India</div>
                         </li>
                       </ul>
                       <ul class="m-0 ">
                         <li>
                           <span>Postal Code:</span>
-                          <div>CA, USA</div>
+                          <div>121101, India</div>
                         </li>
                         <li>
                           <span>Area Name:</span>
-                          <div>Los Angeles</div>
+                          <div>Faridabad</div>
                         </li>
                       </ul>
                     </div>
                   </div>
                 </div>
                 <div class="space30"></div>
-                <div class="comment-bg-area">
+                {% comment %} <div class="comment-bg-area">
                   <h3>Comments (2)</h3>
                   <div class="space30"></div>
                   <div class="comments-boxarea">
@@ -1016,9 +1060,9 @@
                     <div class="space16"></div>
                     <p>"This property looks like a dream home! The open-concept design and high-quality finishes are exactly what I’ve been looking for. I’m curious about the natural lighting and ventilation—do the large windows provide good airflow and sunlight throughout the day?</p>
                   </div>
-                </div>
+                </div> {% endcomment %}
                 <div class="space30"></div>
-                <div class="contact-boxarea">
+                {% comment %} <div class="contact-boxarea">
                   <div class="bg-area">
                     <h3>Send Us A Message</h3>
                     <div class="space8"></div>
@@ -1056,7 +1100,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> {% endcomment %}
               </div>
             </div>
           </div>
@@ -1067,7 +1111,7 @@
   <!--===== PROPERTY AREA ENDS =======-->
   <div class="space30"></div>
   <!--===== PROPERTY AREA STARTS =======-->
-  <div class="propert-bottom-section">
+  {% comment %} <div class="propert-bottom-section">
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-6 m-auto">
@@ -1310,7 +1354,8 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> {% endcomment %}
   <!--===== PROPERTY AREA ENDS =======-->
   <div class="space30"></div>
+
  {% endblock content %}

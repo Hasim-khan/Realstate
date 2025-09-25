@@ -46,8 +46,8 @@ class properties(View):
 class property_detail(View):
     def get(self, request, slug):
         property = get_object_or_404(Property, property_title=slug)
-        total_properties = Property.objects.count()
-        return render(request, 'properties/property-details.html', {'property': property, 'total_properties': total_properties})    
+        # total_properties = Property.objects.count()
+        return render(request, 'properties/property-details.html', {'property': property})    
 
 # def properties(request):
 #     return render(request, 'properties/property.html')
